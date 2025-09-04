@@ -1,5 +1,4 @@
-# Professional CV Template for Quarto
-
+# My CV Quarto Template
 A modern, professional CV template built with **Quarto, LaTeX, and Lua**. Generate stunning PDFs with customizable colors, shields.io-style badges, and professional styling.
 
 By [Eduardo J. Barrios](https://edujbarrios.com)
@@ -158,3 +157,4 @@ Feel free to submit issues, feature requests, or improvements to make this templ
 This template is open source and available under the MIT License. However, a credit to the original author would be appreciated. as "Eduardo J. Barrios - https://edujbarrios.com".
 
 ---
+
