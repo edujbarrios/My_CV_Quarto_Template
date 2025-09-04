@@ -1,0 +1,140 @@
+---
+title: ""
+format:
+  pdf:
+    documentclass: article
+    geometry:
+      - top=2cm
+      - bottom=2cm
+      - left=2cm
+      - right=2cm
+    include-in-header:
+      - template/cv-template.tex
+    keep-tex: false
+# Comentamos los filtros por ahora para evitar errores
+# filters:
+#   - filters/cv-filters-simple.lua
+---
+
+<!-- 
+INSTRUCCIONES:
+Edita las siguientes secciones con tu información personal.
+Reemplaza el contenido entre las llaves {} con tus datos.
+Para añadir elementos a las listas, copia y pega las líneas siguiendo el mismo formato.
+-->
+
+\cvheader{Tu Nombre Completo}{Tu Posición Profesional}{Una breve descripción profesional que destaque tus fortalezas y objetivos profesionales.}{images/placeholder.png}
+
+\contactinfo{tu.email@ejemplo.com}{+1 (555) 123-4567}{linkedin.com/in/tuperfil}{github.com/tuusuario}{www.tusitio.com}{Tu Ciudad, País}
+
+\cvsection{Educación}
+
+\cveducation{Grado en Ingeniería Informática}{Universidad Ejemplo}{2020-2024}{3.8/4.0}{Especialización en Desarrollo de Software}
+
+\cveducation{Máster en Ciencia de Datos}{Instituto Tecnológico}{2024-2025}{3.9/4.0}{Tesis: Aplicaciones de Machine Learning en Salud}
+
+\cvsection{Experiencia Profesional}
+
+\cventry{Desarrollador Senior}{Tech Company SA}{\achievementlist{
+\item Lideré el desarrollo de una aplicación web que aumentó la eficiencia en un 40\%
+\item Implementé arquitecturas de microservicios usando Docker y Kubernetes
+\item Mentoricé a 3 desarrolladores junior
+}}{Ene 2023 - Presente}{Madrid, España}
+
+\cventry{Desarrollador Full Stack}{StartUp Innovadora}{\achievementlist{
+\item Desarrollé el frontend y backend de la plataforma principal
+\item Optimicé las consultas de base de datos mejorando el rendimiento en un 60\%
+\item Participé en decisiones de arquitectura técnica
+}}{Jun 2021 - Dic 2022}{Barcelona, España}
+
+\cvsection{Habilidades Técnicas}
+
+<!-- Badges con colores personalizados de shields.io -->
+<!-- Formato: \techbadge{NOMBRE}{COLOR_HEX} -->
+
+\skillsection{Lenguajes de Programación}{
+\techbadge{Python}{3776ab} \techbadge{JavaScript}{f7df1e} \techbadge{Java}{007396} \techbadge{TypeScript}{3178c6}
+}
+
+\skillsection{Frameworks y Librerías}{
+\techbadge{React}{61dafb} \techbadge{Node.js}{339933} \techbadge{Django}{092e20} \techbadge{Spring Boot}{6db33f}
+}
+
+\skillsection{Bases de Datos}{
+\techbadge{PostgreSQL}{336791} \techbadge{MongoDB}{47a248} \techbadge{Redis}{dc382d}
+}
+
+\skillsection{Cloud y DevOps}{
+\techbadge{AWS}{ff9900} \techbadge{Google Cloud}{4285f4} \techbadge{Docker}{2496ed} \techbadge{Kubernetes}{326ce5}
+}
+
+\skillsection{Herramientas}{
+\techbadge{Git}{f05032} \techbadge{Linux}{fcc624} \techbadge{VS Code}{007acc} \techbadge{Figma}{f24e1e}
+}
+
+\cvsection{Proyectos Destacados}
+
+\cvproject{Sistema de Gestión Empresarial}{Aplicación web completa para gestión de recursos empresariales}{demo.proyecto1.com}{github.com/tuusuario/proyecto1}
+\textbf{Tecnologías:} \texttt{React} \texttt{Node.js} \texttt{PostgreSQL} \texttt{Docker}\\
+\vspace{0.5em}
+
+\cvproject{Aplicación de Análisis de Datos}{Dashboard interactivo para visualización y análisis de datos en tiempo real}{}{github.com/tuusuario/proyecto2}
+\textbf{Tecnologías:} \texttt{Python} \texttt{Streamlit} \texttt{Pandas} \texttt{Plotly}\\
+\vspace{0.5em}
+
+\cvsection{Certificaciones}
+
+\cvcertification{AWS Certified Solutions Architect}{Amazon Web Services}{2024}{aws.amazon.com/verification}
+
+\cvcertification{Google Cloud Professional Data Engineer}{Google Cloud}{2023}{cloud.google.com/certification}
+
+\cvsection{Publicaciones en Congresos}
+
+\cvcongress{Machine Learning Applications in Healthcare Data Analysis}{International Conference on Data Science}{2024}{San Francisco, CA}{Dr. María López, Dr. Juan García}
+
+\cvcongress{Optimizing Web Performance through Advanced Caching Strategies}{European Web Development Conference}{2023}{Amsterdam, Netherlands}{Ana Martínez}
+
+\cvsection{Artículos Científicos}
+
+\cvpublication{A Novel Approach to Distributed System Architecture}{Journal of Computer Science and Technology}{2024}{Vol. 15, No. 3, pp. 245-267}{10.1000/jcst.2024.15.3.245}{Dr. Carlos Ruiz, Prof. Elena Fernández}
+
+\cvpublication{Data Privacy in Machine Learning: Challenges and Solutions}{International Review of Information Security}{2023}{Vol. 8, No. 2, pp. 112-128}{10.1000/iris.2023.8.2.112}{}
+
+<!-- 
+GUÍA PARA AÑADIR CONTENIDO:
+
+1. EDUCACIÓN:
+\cveducation{Título del Grado}{Universidad}{Año}{Nota}{Detalles adicionales}
+
+2. EXPERIENCIA:
+\cventry{Cargo}{Empresa}{\achievementlist{
+\item Logro 1
+\item Logro 2
+\item Logro 3
+}}{Periodo}{Ubicación}
+
+3. HABILIDADES (badges):
+\techbadge{Nombre de la tecnología}{color hexadecimal sin #}
+
+4. PROYECTOS:
+\cvproject{Nombre del Proyecto}{Descripción}{URL demo}{URL GitHub}
+\textbf{Tecnologías:} \texttt{Tech1} \texttt{Tech2} \texttt{Tech3}\\
+\vspace{0.5em}
+
+5. CERTIFICACIONES:
+\cvcertification{Nombre de la Certificación}{Emisor}{Año}{URL de verificación}
+
+6. PUBLICACIONES EN CONGRESOS:
+\cvcongress{Título}{Conferencia}{Año}{Ubicación}{Coautores}
+
+7. ARTÍCULOS CIENTÍFICOS:
+\cvpublication{Título}{Revista}{Año}{Volumen y páginas}{DOI}{Coautores}
+
+COLORES POPULARES PARA BADGES:
+- Python: 3776ab
+- JavaScript: f7df1e  
+- React: 61dafb
+- AWS: ff9900
+- Docker: 2496ed
+- Tu color personalizado: 20B2AA (como tu ejemplo)
+-->

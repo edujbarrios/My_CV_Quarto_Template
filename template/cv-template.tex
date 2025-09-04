@@ -1,0 +1,184 @@
+% CV Template for Quarto
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{adjustbox}
+\usepackage{calc}
+\usepackage{ifthen}
+
+% Color scheme - Optimizado para visualización en PDF
+\definecolor{primary}{HTML}{2C3E50}
+\definecolor{secondary}{HTML}{2E5F8A}
+\definecolor{accent}{HTML}{E74C3C}
+\definecolor{lightgray}{HTML}{F8F9FA}
+\definecolor{darkgray}{HTML}{6C757D}
+\definecolor{success}{HTML}{28A745}
+
+% Hyperlink setup - Enlaces en el mismo azul que el texto secundario
+\hypersetup{
+    colorlinks=true,
+    linkcolor=secondary,
+    filecolor=secondary,
+    urlcolor=secondary,
+    citecolor=secondary
+}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Custom commands for sections
+\newcommand{\cvsection}[1]{
+    \vspace{1em}
+    {\Large\color{primary}\textbf{#1}}
+    \vspace{0.5em}
+    \hrule height 2pt
+    \vspace{0.5em}
+}
+
+% Custom command for subsections
+\newcommand{\cvsubsection}[1]{
+    \vspace{0.5em}
+    {\large\color{secondary}\textbf{#1}}
+    \vspace{0.3em}
+}
+
+% Custom command for experience entries
+\newcommand{\cventry}[5]{
+    \begin{tabularx}{\textwidth}{@{}l X r@{}}
+        \textbf{\color{primary}#1} & & \textit{\color{darkgray}#4} \\
+        \textit{\color{secondary}#2} & & \textit{\color{darkgray}#5} \\
+        \multicolumn{3}{@{}p{\textwidth}@{}}{\color{darkgray}#3}
+    \end{tabularx}
+    \vspace{0.3em}
+}
+
+% Custom command for education entries
+\newcommand{\cveducation}[5]{
+    \begin{tabularx}{\textwidth}{@{}l X r@{}}
+        \textbf{\color{primary}#1} & & \textit{\color{darkgray}#3} \\
+        \textit{\color{secondary}#2} & & \textbf{\color{success}GPA: #4} \\
+        \multicolumn{3}{@{}p{\textwidth}@{}}{\color{darkgray}#5}
+    \end{tabularx}
+    \vspace{0.3em}
+}
+
+% Custom command for project entries
+\newcommand{\cvproject}[4]{
+    \textbf{\color{primary}#1}
+    \ifthenelse{\equal{#3}{}}{}{ - \href{#3}{\color{secondary}\faExternalLink*}}
+    \ifthenelse{\equal{#4}{}}{}{ - \href{#4}{\color{secondary}\faGithub}}
+    \\
+    \textit{\color{darkgray}#2}
+    \vspace{0.3em}
+}
+
+% Custom command for publication entries
+\newcommand{\cvpublication}[6]{
+    \textbf{\color{primary}#1} \\
+    \textit{\color{secondary}#2} \\
+    \color{darkgray}#3, #4 \\
+    \ifthenelse{\equal{#5}{}}{}{\textbf{DOI:} \href{https://doi.org/#5}{#5} \\}
+    \ifthenelse{\equal{#6}{}}{}{\textbf{Coautores:} #6}
+    \vspace{0.3em}
+}
+
+% Custom command for congress publication entries
+\newcommand{\cvcongress}[5]{
+    \textbf{\color{primary}#1} \\
+    \textit{\color{secondary}#2} \\
+    \color{darkgray}#3, #4 \\
+    \ifthenelse{\equal{#5}{}}{}{\textbf{Coautores:} #5}
+    \vspace{0.3em}
+}
+
+% Custom command for certification entries
+\newcommand{\cvcertification}[4]{
+    \begin{tabularx}{\textwidth}{@{}l X r@{}}
+        \textbf{\color{primary}#1} & & \textit{\color{darkgray}#3} \\
+        \textit{\color{secondary}#2} & & \ifthenelse{\equal{#4}{}}{}{\href{#4}{\color{secondary}\faExternalLink*}}
+    \end{tabularx}
+    \vspace{0.3em}
+}
+
+% Custom command for badges
+\newcommand{\skillbadge}[2]{
+    \colorbox{black!10}{\textcolor{white}{\textbf{\texttt{#1}}}}
+}
+
+% Alternative badge command using colored boxes instead of images
+\newcommand{\techbadge}[2]{
+    \tikz[baseline=(text.base)]{
+        \definecolor{badgecolor}{HTML}{#2}
+        \node[rounded corners=3pt, fill=badgecolor, text=white, font=\small\bfseries, inner sep=3pt] (text) {#1};
+    }\,
+}
+
+% Contact information styling
+\newcommand{\contactinfo}[6]{
+    \begin{center}
+        \begin{tabular}{c c c}
+            \ifthenelse{\equal{#1}{}}{}{\faEnvelope \, \href{mailto:#1}{#1}} &
+            \ifthenelse{\equal{#2}{}}{}{\faPhone \, #2} &
+            \ifthenelse{\equal{#6}{}}{}{\faMapMarker* \, #6} \\
+            \ifthenelse{\equal{#3}{}}{}{\faLinkedin \, \href{https://#3}{LinkedIn}} &
+            \ifthenelse{\equal{#4}{}}{}{\faGithub \, \href{https://#4}{GitHub}} &
+            \ifthenelse{\equal{#5}{}}{}{\faGlobe \, \href{https://#5}{Website}}
+        \end{tabular}
+    \end{center}
+}
+
+% Header with photo and name
+\newcommand{\cvheader}[4]{
+    \begin{center}
+        \ifthenelse{\equal{#4}{}}{}{
+            \begin{tikzpicture}
+                \clip (0,0) circle (1.5cm);
+                \node at (0,0) {\includegraphics[width=3cm]{#4}};
+            \end{tikzpicture}
+            \vspace{0.5em}
+        }
+        
+        {\Huge\color{primary}\textbf{#1}}
+        \vspace{0.3em}
+        
+        {\Large\color{secondary}\textit{#2}}
+        \vspace{0.5em}
+        
+        {\normalsize\color{darkgray}#3}
+    \end{center}
+    \vspace{1em}
+}
+
+% Achievement list styling
+\newcommand{\achievementlist}[1]{
+    \begin{itemize}[leftmargin=1em, itemsep=0.2em]
+        #1
+    \end{itemize}
+}
+
+% Technology badges
+\newcommand{\techbadges}[1]{
+    \foreach \tech/\color in {#1} {
+        \skillbadge{\tech}{\color} \,
+    }
+}
+
+% Skills section with badges
+\newcommand{\skillsection}[2]{
+    \cvsubsection{#1}
+    #2
+    \vspace{0.5em}
+}

@@ -1,0 +1,129 @@
+---
+title: ""
+format:
+  pdf:
+    documentclass: article
+    geometry:
+      - top=2cm
+      - bottom=2cm
+      - left=2cm
+      - right=2cm
+    include-in-header:
+      - template/cv-template.tex
+    keep-tex: false
+# Filters commented out for now to avoid errors
+# filters:
+#   - filters/cv-filters-simple.lua
+---
+
+<!-- 
+INSTRUCTIONS:
+Edit the following sections with your personal information.
+Replace the content inside the braces {} with your data.
+To add items to lists, copy and paste the lines following the same format.
+-->
+
+\cvheader{Your Full Name}{Your Professional Title}{A brief professional summary highlighting your strengths and career goals.}{images/placeholder.png}
+
+\contactinfo{your.email@example.com}{+1 (555) 123-4567}{linkedin.com/in/yourprofile}{github.com/yourusername}{www.yoursite.com}{Your City, Country}
+
+\cvsection{Education}
+
+\cveducation{Bachelor in Computer Engineering}{Example University}{2020-2024}{3.8/4.0}{Specialization in Software Development}
+
+\cveducation{Master in Data Science}{Technological Institute}{2024-2025}{3.9/4.0}{Thesis: Machine Learning Applications in Healthcare}
+
+\cvsection{Professional Experience}
+
+\cventry{Senior Developer}{Tech Company SA}{\achievementlist{
+\item Led the development of a web application that improved efficiency by 40\%
+\item Implemented microservices architecture using Docker and Kubernetes
+\item Mentored 3 junior developers
+}}{Jan 2023 - Present}{Madrid, Spain}
+
+\cventry{Full Stack Developer}{Innovative StartUp}{\achievementlist{
+\item Developed the frontend and backend of the main platform
+\item Optimized database queries improving performance by 60\%
+\item Participated in technical architecture decisions
+}}{Jun 2021 - Dec 2022}{Barcelona, Spain}
+
+\cvsection{Technical Skills}
+
+\skillsection{Programming Languages}{
+\techbadge{Python}{3776ab} \techbadge{JavaScript}{f7df1e} \techbadge{Java}{007396} \techbadge{TypeScript}{3178c6}
+}
+
+\skillsection{Frameworks and Libraries}{
+\techbadge{React}{61dafb} \techbadge{Node.js}{339933} \techbadge{Django}{092e20} \techbadge{Spring Boot}{6db33f}
+}
+
+\skillsection{Databases}{
+\techbadge{PostgreSQL}{336791} \techbadge{MongoDB}{47a248} \techbadge{Redis}{dc382d}
+}
+
+\skillsection{Cloud and DevOps}{
+\techbadge{AWS}{ff9900} \techbadge{Google Cloud}{4285f4} \techbadge{Docker}{2496ed} \techbadge{Kubernetes}{326ce5}
+}
+
+\skillsection{Tools}{
+\techbadge{Git}{f05032} \techbadge{Linux}{fcc624} \techbadge{VS Code}{007acc} \techbadge{Figma}{f24e1e}
+}
+
+\cvsection{Highlighted Projects}
+
+\cvproject{Business Management System}{Full web application for business resource management}{demo.project1.com}{github.com/yourusername/project1}
+\textbf{Technologies:} \texttt{React} \texttt{Node.js} \texttt{PostgreSQL} \texttt{Docker}\\
+\vspace{0.5em}
+
+\cvproject{Data Analysis Application}{Interactive dashboard for real-time data visualization and analysis}{}{github.com/yourusername/project2}
+\textbf{Technologies:} \texttt{Python} \texttt{Streamlit} \texttt{Pandas} \texttt{Plotly}\\
+\vspace{0.5em}
+
+\cvsection{Certifications}
+
+\cvcertification{AWS Certified Solutions Architect}{Amazon Web Services}{2024}{aws.amazon.com/verification}
+
+\cvcertification{Google Cloud Professional Data Engineer}{Google Cloud}{2023}{cloud.google.com/certification}
+
+\cvsection{Conference Publications}
+
+\cvcongress{Machine Learning Applications in Healthcare Data Analysis}{International Conference on Data Science}{2024}{San Francisco, CA}{Dr. María López, Dr. Juan García}
+
+\cvcongress{Optimizing Web Performance through Advanced Caching Strategies}{European Web Development Conference}{2023}{Amsterdam, Netherlands}{Ana Martínez}
+
+\cvsection{Scientific Articles}
+
+\cvpublication{A Novel Approach to Distributed System Architecture}{Journal of Computer Science and Technology}{2024}{Vol. 15, No. 3, pp. 245-267}{10.1000/jcst.2024.15.3.245}{Dr. Carlos Ruiz, Prof. Elena Fernández}
+
+\cvpublication{Data Privacy in Machine Learning: Challenges and Solutions}{International Review of Information Security}{2023}{Vol. 8, No. 2, pp. 112-128}{10.1000/iris.2023.8.2.112}{}
+
+<!-- 
+GUIDE TO ADD CONTENT:
+
+1. EDUCATION:
+\cveducation{Degree}{University}{Year}{GPA}{Additional details}
+
+2. EXPERIENCE:
+\cventry{Role}{Company}{\achievementlist{
+\item Achievement 1
+\item Achievement 2
+\item Achievement 3
+}}{Period}{Location}
+
+3. SKILLS (badges):
+\techbadge{Technology}{hex color without #}
+
+4. PROJECTS:
+\cvproject{Name}{Description}{Demo URL}{GitHub URL}
+\textbf{Technologies:} \texttt{Tech1} \texttt{Tech2} \texttt{Tech3}\\
+\vspace{0.5em}
+
+5. CERTIFICATIONS:
+\cvcertification{Name}{Issuer}{Year}{Verification URL}
+
+6. CONFERENCE PUBLICATIONS:
+\cvcongress{Title}{Conference}{Year}{Location}{Co-authors}
+
+7. SCIENTIFIC ARTICLES:
+\cvpublication{Title}{Journal}{Year}{Volume and pages}{DOI}{Co-authors}
+-->
